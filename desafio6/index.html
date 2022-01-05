@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios das Tags</title>
+    <style>
+       [data-title]:hover:after {
+              opacity: 1;
+              transition: all 0.1s ease 0.5s;
+              visibility: visible;
+           }
+       [data-title]:after {
+              content: attr(data-title);
+              position: absolute;
+              bottom: -1.6em;
+              left: 100%;
+              padding: 4px 4px 4px 8px;
+              color: #222;
+              white-space: nowrap; 
+              -moz-border-radius: 5px; 
+              -webkit-border-radius: 5px;  
+              border-radius: 5px;  
+              -moz-box-shadow: 0px 0px 4px #222;  
+              -webkit-box-shadow: 0px 0px 4px #222;  
+              box-shadow: 0px 0px 4px #222;  
+              background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);  
+              background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f8f8f8),color-stop(1, #cccccc));
+              background-image: -webkit-linear-gradient(top, #f8f8f8, #cccccc);  
+              background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);  
+              background-image: -ms-linear-gradient(top, #f8f8f8, #cccccc);  
+              background-image: -o-linear-gradient(top, #f8f8f8, #cccccc);
+              opacity: 0;
+              z-index: 99999;
+              visibility: hidden;
+        }
+        [data-title] {
+              position: relative;
+        }
+
+      abbr{
+          border-bottom: .1em dotted;
+          /*cursor: help;*/
+          border-width:1px;
+          color: blue;
+          }
+    </style>
+ 
+</head>
+<body>
+    <h1>Tags em HTML</h1>
+    <h4>Em Html5, podemos inserir os elementos da linha a seguir. Passe o mouse sobre os termos para descobrir qual a tag deverá utilizar em cada caso.</h4>
+
+    <ul type="square">
+        <li><abbr data-title= "<strong> </strong>">Negrito</abbr> </li>
+        <li><abbr data-title= "<em> </em>">Itálico</abbr> </li>
+        <li><abbr data-title= "<mark> </mark">Texto marcado</abbr> </li>
+        <li><abbr data-title= "<sup> </sup>">Texto sobrescrito</abbr> </li>     
+        <li><abbr data-title= "<sub> </sub>">Texto subescrito</abbr> </li>
+        <li><abbr data-title= "<small> </small>">Texto pequeno (Contratos)</abbr> </li>
+        <li><abbr data-title= "<p> </p>">Parágrafo</abbr> </li>
+        <li><abbr data-title= "de: <h1> até: <h6>">Títulos</abbr> </li>
+        <li><abbr data-title= "<img src='foto.png' alt='Exemplo de Foto'>">Imagens</abbr> </li>
+        <li><abbr data-title= "<abbr title='Estados Unidos da America'>EUA</abbr>">Abreviações</abbr> </li>
+        <li><abbr data-title= "<code> </code>">Código-fonte</abbr> </li>
+        <li><abbr data-title= "<ol> </ol>">Listas numeradas</abbr> </li>
+        <li><abbr data-title= "<ul> </ul>">Listas com demarcadores</abbr> </li>
+        <li><abbr data-title= "<dt>HTML</dt> <dd>Linguagem de marcação para a criação de conteúdo de um site</dd> ">Listas de definição</abbr> </li>
+    </ul>
+    <hr>
+    <h1>Atalhos no editor Visual Studio Code</h1>
+    <li><abbr data-title= "Digitar ! e esperar 3seg">Preenche com texto HTML5 básico nova documento</abbr> </li>
+    <li><abbr data-title= "<CTRL>+<SPACE>">Para mostrar pasta e seus subdiretórios</abbr> </li>
+    <li><abbr data-title= "<CTRL>+<SHIFT>+<P>">Envelopar um trecho do parágrafo para colocar uma tag HTML</abbr> </li>   
+
+
+    
+</body>
+</html>
