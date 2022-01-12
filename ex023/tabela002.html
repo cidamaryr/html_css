@@ -10,6 +10,7 @@
            font-family: Arial, Helvetica, sans-serif;
         }
         table{
+            position: relative;
             width: 500px;
             border-collapse: collapse;
         }
@@ -20,10 +21,35 @@
         td.num{
             text-align: right;
         }
+
         thead, tfoot{
-          background-color: gray;
+          background-color: #383838;
           color: white;  
           
+        }
+        thead > tr > th{
+           position: sticky;
+           top: -1px;
+           background-color: #383838;
+
+        }
+
+       /* tbody > tr:nth-child(2n){ */
+         /*só linhas ímpares odd (ou 2n-1 ) 
+           ou só linhas pares even (ou 2n)
+         */
+         tbody > tr:nth-child(odd){
+           background-color: lightgray;
+        }
+        tbody > tr:nth-child(even){
+           background-color: lightgreen;
+        }
+
+        caption{
+           font-size: 1.5em;
+           font-weight: bold;
+           padding: 10px;
+           background-color: lightgray;
         }
      </style>
 
@@ -40,12 +66,14 @@
         TR, TD, TH
     -->
     <table>
+
+        <caption>População das Unidades Federativas</caption>
         <thead>
-           <th>Estado</th>
-           <th>População(Jul/2021)</th>
+           <th scope="col">Estado</th>
+           <th scope="col" style="width: 50px;">População(Jul/2021)</th>
         </thead>
         <tbody>
-           <caption>População das Unidades Federativas</caption>
+
            <tr>
                <td>São Paulo</td>
                <td class="num">46 649 132	</td>
@@ -157,13 +185,50 @@
         </tbody>
         <tfoot>
            <tr>
-               <th>Total de Habitantes</th>
+               <th scope="row">Total de Habitantes</th>
                <td class="num"><strong>212 730 197</strong></td>
            </tr>
         </tfoot>
-
-
     </table>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odio dolores, alias ut nisi debitis quam illum modi similique ex? Autem dolores quis a ullam unde placeat quo nesciunt sapiente.
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo molestias quia optio harum dolores doloremque placeat officia alias, excepturi, sapiente cumque adipisci? Voluptatibus aspernatur, facilis quas corporis fugiat libero.
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum voluptatem consequatur repellat eos corrupti mollitia sequi tenetur enim accusamus quisquam nihil eum, praesentium doloribus possimus sunt. Vero, unde reiciendis.
+       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut libero officiis deleniti placeat animi ducimus illo, adipisci mollitia accusantium atque magnam eaque dignissimos cupiditate sint numquam, architecto magni enim molestias.
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae molestias reiciendis unde aliquid iste minus, modi exercitationem, aliquam consectetur magni harum iusto voluptate maxime repellendus libero voluptas, explicabo illum animi.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odio dolores, alias ut nisi debitis quam illum modi similique ex? Autem dolores quis a ullam unde placeat quo nesciunt sapiente.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo molestias quia optio harum dolores doloremque placeat officia alias, excepturi, sapiente cumque adipisci? Voluptatibus aspernatur, facilis quas corporis fugiat libero.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum voluptatem consequatur repellat eos corrupti mollitia sequi tenetur enim accusamus quisquam nihil eum, praesentium doloribus possimus sunt. Vero, unde reiciendis.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut libero officiis deleniti placeat animi ducimus illo, adipisci mollitia accusantium atque magnam eaque dignissimos cupiditate sint numquam, architecto magni enim molestias.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae molestias reiciendis unde aliquid iste minus, modi exercitationem, aliquam consectetur magni harum iusto voluptate maxime repellendus libero voluptas, explicabo illum animi.
+   </p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odio dolores, alias ut nisi debitis quam illum modi similique ex? Autem dolores quis a ullam unde placeat quo nesciunt sapiente.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo molestias quia optio harum dolores doloremque placeat officia alias, excepturi, sapiente cumque adipisci? Voluptatibus aspernatur, facilis quas corporis fugiat libero.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum voluptatem consequatur repellat eos corrupti mollitia sequi tenetur enim accusamus quisquam nihil eum, praesentium doloribus possimus sunt. Vero, unde reiciendis.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut libero officiis deleniti placeat animi ducimus illo, adipisci mollitia accusantium atque magnam eaque dignissimos cupiditate sint numquam, architecto magni enim molestias.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae molestias reiciendis unde aliquid iste minus, modi exercitationem, aliquam consectetur magni harum iusto voluptate maxime repellendus libero voluptas, explicabo illum animi.
+   </p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odio dolores, alias ut nisi debitis quam illum modi similique ex? Autem dolores quis a ullam unde placeat quo nesciunt sapiente.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo molestias quia optio harum dolores doloremque placeat officia alias, excepturi, sapiente cumque adipisci? Voluptatibus aspernatur, facilis quas corporis fugiat libero.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum voluptatem consequatur repellat eos corrupti mollitia sequi tenetur enim accusamus quisquam nihil eum, praesentium doloribus possimus sunt. Vero, unde reiciendis.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut libero officiis deleniti placeat animi ducimus illo, adipisci mollitia accusantium atque magnam eaque dignissimos cupiditate sint numquam, architecto magni enim molestias.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae molestias reiciendis unde aliquid iste minus, modi exercitationem, aliquam consectetur magni harum iusto voluptate maxime repellendus libero voluptas, explicabo illum animi.
+   </p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odio dolores, alias ut nisi debitis quam illum modi similique ex? Autem dolores quis a ullam unde placeat quo nesciunt sapiente.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo molestias quia optio harum dolores doloremque placeat officia alias, excepturi, sapiente cumque adipisci? Voluptatibus aspernatur, facilis quas corporis fugiat libero.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum voluptatem consequatur repellat eos corrupti mollitia sequi tenetur enim accusamus quisquam nihil eum, praesentium doloribus possimus sunt. Vero, unde reiciendis.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut libero officiis deleniti placeat animi ducimus illo, adipisci mollitia accusantium atque magnam eaque dignissimos cupiditate sint numquam, architecto magni enim molestias.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae molestias reiciendis unde aliquid iste minus, modi exercitationem, aliquam consectetur magni harum iusto voluptate maxime repellendus libero voluptas, explicabo illum animi.
+   </p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odio dolores, alias ut nisi debitis quam illum modi similique ex? Autem dolores quis a ullam unde placeat quo nesciunt sapiente.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam explicabo molestias quia optio harum dolores doloremque placeat officia alias, excepturi, sapiente cumque adipisci? Voluptatibus aspernatur, facilis quas corporis fugiat libero.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum voluptatem consequatur repellat eos corrupti mollitia sequi tenetur enim accusamus quisquam nihil eum, praesentium doloribus possimus sunt. Vero, unde reiciendis.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut libero officiis deleniti placeat animi ducimus illo, adipisci mollitia accusantium atque magnam eaque dignissimos cupiditate sint numquam, architecto magni enim molestias.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae molestias reiciendis unde aliquid iste minus, modi exercitationem, aliquam consectetur magni harum iusto voluptate maxime repellendus libero voluptas, explicabo illum animi.
+   </p>
+
+
+
 
 
 </body>
